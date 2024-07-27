@@ -8,6 +8,7 @@
   </head>
   <body>
     <div class="container">
+      <img class="logo" src="./logo.png" alt="logo" />
       <h1>Dictionary Trainer</h1>
       <div id="auth-section">
         <div id="login-form">
@@ -30,9 +31,11 @@
         </div>
         <button onclick="toggleForms()">Switch to Register</button>
       </div>
+
       <div id="app-section" style="display: none">
         <h2>Welcome, <span id="username-display"></span></h2>
-        <button onclick="logout()">Logout</button>
+
+        <button class="logoutBtn" onclick="logout()">Logout</button>
         <div id="admin-section" style="display: none">
           <h3>Add Words for User</h3>
           <input type="text" id="user-word" placeholder="Word" />
@@ -40,16 +43,18 @@
           <select id="user-select"></select>
           <button onclick="addWordForUser()">Add Word for User</button>
         </div>
-        <div class="form-group">
-          <input type="text" id="word" placeholder="Word" />
-          <input type="text" id="translation" placeholder="Translation" />
-          <button onclick="addWord()">Add Word</button>
-        </div>
+
         <div class="result">
           <button class="nav-button" onclick="previousWord()">Previous</button>
           <p id="randomWord" onclick="showTranslation()"></p>
           <button class="nav-button" onclick="nextWord()">Next</button>
-          <p id="translationOutput"></p>
+        </div>
+        <p id="translationOutput"></p>
+
+        <div class="form-group">
+          <input type="text" id="word" placeholder="Word" />
+          <input type="text" id="translation" placeholder="Translation" />
+          <button onclick="addWord()">Add Word</button>
         </div>
       </div>
     </div>
